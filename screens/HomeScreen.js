@@ -1,10 +1,74 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 
 export default function HomeScreen() {
     return (
-        <View className="w-full h-full flex items-center justify-center">
-            <Text>Home</Text>
-        </View>
+        <ScrollView>
+            <View className="w-full flex-column items-center bg-red-300">
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+            </View>
+            <View className="w-full flex-column items-center bg-blue-300">
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+                <Text>Home</Text>
+            </View>
+        </ScrollView>
     )
 }
