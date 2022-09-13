@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import ProfileTeam from '../components/Profile'
 
 export default function HomeScreen() {
@@ -14,7 +14,7 @@ export default function HomeScreen() {
             <View className="p-4 space-y-5">
                 <View className="">
                     <Text className="font-bold text-3xl text-center mb-2">Reto Titanic</Text>
-                    <Text className="text-lg text-gray-500">
+                    <Text className="text-lg text-gray-500 text-justify">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                         when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
