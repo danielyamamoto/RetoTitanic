@@ -7,9 +7,12 @@ export default function Alg1Screen() {
             <View className="p-4 space-y-5">
                 <View>
                     <Text className="font-bold text-3xl text-center mb-2">Algoritmo 1</Text>
-                    <Text className="text-lg text-gray-500 text-center">Decision Tree</Text>
+                    <Text className="text-lg text-gray-500 text-center">Random Forest</Text>
                 </View>
                 <View>
+                    <Image
+                        source={require('../assets/alg1/model.png')}
+                        className="h-48 w-full rounded-lg mb-2" />
                     <Text className="font-bold text-xl mb-2">Justificación</Text>
                     <Text className="text-lg text-gray-500 text-justify">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -27,9 +30,7 @@ export default function Alg1Screen() {
                         <View className="flex-column space-y-2">
                             <Text className="text-lg text-gray-500">Precisión obtenida</Text>
                             <View className="flex items-center">
-                                <Image 
-                                    source={require('../assets/Juan.jpg')}
-                                    className="h-24 w-full" />
+                                <Text className="text-lg">0.9135802469135802</Text>
                             </View>
                         </View>
 
@@ -46,17 +47,15 @@ export default function Alg1Screen() {
                             <Text className="text-lg text-gray-500">ROC</Text>
                             <View className="flex items-center">
                                 <Image 
-                                    source={require('../assets/Juan.jpg')}
-                                    className="h-48 w-full" />
+                                    source={require('../assets/alg1/ROC.jpeg')}
+                                    className="h-56 w-full" />
                             </View>
                         </View>
 
                         <View className="flex-column space-y-2">
                             <Text className="text-lg text-gray-500">AUC</Text>
                             <View className="flex items-center">
-                                <Image 
-                                    source={require('../assets/Juan.jpg')}
-                                    className="h-48 w-full" />
+                                <Text className="text-lg">0.89</Text>
                             </View>
                         </View>
 
@@ -64,7 +63,7 @@ export default function Alg1Screen() {
                             <Text className="text-lg text-gray-500">Puntaje obtenido en Kaggle</Text>
                             <View className="flex items-center">
                                 <Image 
-                                    source={require('../assets/Juan.jpg')}
+                                    source={require('../assets/main/Juan.jpg')}
                                     className="h-24 w-full" />
                             </View>
                         </View>

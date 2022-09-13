@@ -10,6 +10,9 @@ export default function Alg2Screen() {
                     <Text className="text-lg text-gray-500 text-center">Perceptron</Text>
                 </View>
                 <View>
+                    <Image
+                        source={require('../assets/alg2/model.png')}
+                        className="h-48 w-full rounded-lg -mt-4" />
                     <Text className="font-bold text-xl mb-2">Justificación</Text>
                     <Text className="text-lg text-gray-500 text-justify">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -27,9 +30,7 @@ export default function Alg2Screen() {
                         <View className="flex-column space-y-2">
                             <Text className="text-lg text-gray-500">Precisión obtenida</Text>
                             <View className="flex items-center">
-                                <Image 
-                                    source={require('../assets/Juan.jpg')}
-                                    className="h-24 w-full" />
+                                <Text className="text-lg">0.8765432098765432</Text>
                             </View>
                         </View>
 
@@ -37,7 +38,7 @@ export default function Alg2Screen() {
                             <Text className="text-lg text-gray-500">Matriz de confusión</Text>
                             <View className="flex items-center">
                                 <Image 
-                                    source={require('../assets/alg1/confusion-matrix.jpeg')}
+                                    source={require('../assets/alg2/confusion-matrix.jpeg')}
                                     className="h-64 w-12/12" />
                             </View>
                         </View>
@@ -46,17 +47,15 @@ export default function Alg2Screen() {
                             <Text className="text-lg text-gray-500">ROC</Text>
                             <View className="flex items-center">
                                 <Image 
-                                    source={require('../assets/Juan.jpg')}
-                                    className="h-48 w-full" />
+                                    source={require('../assets/alg2/ROC.jpeg')}
+                                    className="h-56 w-full" />
                             </View>
                         </View>
 
                         <View className="flex-column space-y-2">
                             <Text className="text-lg text-gray-500">AUC</Text>
                             <View className="flex items-center">
-                                <Image 
-                                    source={require('../assets/Juan.jpg')}
-                                    className="h-48 w-full" />
+                                <Text className="text-lg">0.86</Text>
                             </View>
                         </View>
 
@@ -64,7 +63,7 @@ export default function Alg2Screen() {
                             <Text className="text-lg text-gray-500">Puntaje obtenido en Kaggle</Text>
                             <View className="flex items-center">
                                 <Image 
-                                    source={require('../assets/Juan.jpg')}
+                                    source={require('../assets/main/Juan.jpg')}
                                     className="h-24 w-full" />
                             </View>
                         </View>

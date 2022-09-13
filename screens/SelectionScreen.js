@@ -1,10 +1,27 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import { ScrollView, View, Text, Image } from 'react-native'
 
 export default function SelectionScreen() {
     return (
-        <View className="w-full h-full flex items-center justify-center">
-            <Text Text>SelectionScreen</Text>
-        </View>
+        <ScrollView>
+            <View className="p-4 space-y-5">
+                <View>
+                    <Text className="font-bold text-3xl text-center mb-2">Random Forest</Text>
+                    <Text className="text-lg text-gray-500 text-center">¿Por qué?</Text>
+                </View>
+                <View>
+                    <Text className="font-bold text-xl mb-2">Justificación</Text>
+                    <Text className="text-lg text-gray-500 text-justify">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                        It has survived not only five centuries, but also the leap into electronic typesetting, 
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of 
+                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+                        software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </Text>
+                </View>
+            </View>
+        </ScrollView>
     )
 }

@@ -1,19 +1,22 @@
 import React from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, Image, ScrollView } from 'react-native';
 import ProfileTeam from '../components/Profile'
 
 export default function HomeScreen() {
     const team = [
-        {uri: require("../assets/Juan.jpg"), name: "Juan Díaz", matricula: "A01653546"},
-        {uri: require("../assets/Hector.jpg"), name: "Héctor Noyola", matricula: "A01023808"},
-        {uri: require("../assets/Daniel.jpg"), name: "Daniel Yamamoto", matricula: "A01658318"},
+        {uri: require("../assets/main/Juan.jpg"), name: "Juan Díaz", matricula: "A01653546"},
+        {uri: require("../assets/main/Hector.jpg"), name: "Héctor Noyola", matricula: "A01023808"},
+        {uri: require("../assets/main/Daniel.jpg"), name: "Daniel Yamamoto", matricula: "A01658318"},
     ]
 
     return (
         <ScrollView>
             <View className="p-4 space-y-5">
-                <View className="">
-                    <Text className="font-bold text-3xl text-center mb-2">Reto Titanic</Text>
+                <View>
+                    <Text className="font-bold text-3xl text-center">Reto Titanic</Text>
+                    <Image
+                        source={require('../assets/main/titanic.jpg')}
+                        className="h-48 w-full rounded-lg my-4" />
                     <Text className="text-lg text-gray-500 text-justify">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
