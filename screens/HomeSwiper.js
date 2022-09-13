@@ -1,5 +1,9 @@
-import React from 'react';
+import { React, useEffect, useState } from 'react';
+import { useNavigation, useIsFocused } from '@react-navigation/native';
+import { useSelector, useDispatch } from 'react-redux';
 import { SafeAreaView, View } from 'react-native'
+import { HomeIcon, BeakerIcon, DocumentReportIcon, ChartSquareBarIcon, ChartPieIcon } from 'react-native-heroicons/outline';
+import { changeValue, indexValue } from '../features/generalVariables';
 import Swiper from "react-native-screens-swiper";
 import Alg1Screen from './Alg1Screen';
 import Alg2Screen from './Alg2Screen';
@@ -8,6 +12,16 @@ import SelectionScreen from './SelectionScreen';
 import PredictionScreen from './PredictionScreen';
 
 export default function HomeSwiper() {
+    //const dispatch = useDispatch();
+    //const isFocused = useIsFocused();
+    //const navigation = useNavigation();
+    let index = useSelector(indexValue);
+    //console.log(index)
+
+    //useEffect (() => {
+        //index = useSelector(indexValue);    
+    //}, []);
+
     const data = [
         {
             tabLabel: 'Alg1',
@@ -32,17 +46,6 @@ export default function HomeSwiper() {
     ];
 
     const styles = {
-        /*
-        container: {
-            flex: 1,
-            height: '100%',
-            backgroundColor: '#FFFF',
-            alignItems: 'center',
-            justifyContent: 'center',
-        },
-        */    
-    
-        // [View] Static pills container
         staticPillsContainer: {
             height: 35,
             backgroundColor: 'white',
@@ -50,17 +53,14 @@ export default function HomeSwiper() {
             justifyContent: 'center',
         },
             
-        // [Text] Button's text
         pillLabel: {
             color: 'gray',
         },
         
-        // [Text] Active button's text
         activeLabel: {
             color: '#00CCDD',
         },
         
-        // [View] Border of active pill (:warning: opacity will override animation's opacity)
         borderActive: {
             borderColor: '#00CCDD'
         },
@@ -73,8 +73,14 @@ export default function HomeSwiper() {
                 style={styles}
                 isStaticPills={true}
                 initialScrollIndex={2}
-                scrollableContainer={false}
-                >
+            >
+                <View className="w-full h-10 flex-row items-center justify-around -mb-2">
+                    <ChartSquareBarIcon color={index === 0 ? "#00CCDD" : "gray"} />
+                    <ChartPieIcon color={index === 1 ? "#00CCDD" : "gray"} />
+                    <HomeIcon color={index === 2 ? "#00CCDD" : "gray"} />
+                    <DocumentReportIcon color={index == 3 ? "#00CCDD" : "gray"} />
+                    <BeakerIcon color={index === 4 ? "#00CCDD" : "gray"} />
+                </View>
             </Swiper>
         </SafeAreaView>
     )
