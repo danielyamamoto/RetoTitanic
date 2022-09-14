@@ -63,7 +63,7 @@ export default function Alg1Screen() {
                             <Text className="text-lg text-gray-500">Puntaje obtenido en Kaggle</Text>
                             <View className="flex items-center">
                                 <Image 
-                                    source={require('../assets/main/Juan.jpg')}
+                                    source={require('../assets/alg1/kaggle.jpeg')}
                                     className="h-24 w-full" />
                             </View>
                         </View>

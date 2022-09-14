@@ -6,10 +6,6 @@ app = Flask(__name__)
 model = pickle.load(open('perceptron.pkl', 'rb'))
 
 
-@app.route('/')
-def home():
-    return "HOME"
-
 @app.route('/', methods=['POST'])
 def predict():
 
@@ -27,12 +23,6 @@ def predict():
     prediction = model.predict(final_features)
     print(prediction[0])
     return "{}".format(prediction)
-    '''
-    int_features = [float(x) for x in request.form.values()]
-    final_features = np.array(int_features).reshape(1,-1)
-    prediction = model.predict(final_features)
-    return render_template('index.html', prediction_text='Predicted Category {}'.format(prediction))
-    '''
 
 if __name__ == "__main__":
     app.run('192.168.1.69')

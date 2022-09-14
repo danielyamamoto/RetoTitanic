@@ -30,7 +30,7 @@ export default function Alg2Screen() {
                         <View className="flex-column space-y-2">
                             <Text className="text-lg text-gray-500">Precisión obtenida</Text>
                             <View className="flex items-center">
-                                <Text className="text-lg">0.8765432098765432</Text>
+                                <Text className="text-lg">0.8888888888888888</Text>
                             </View>
                         </View>
 
@@ -55,7 +55,7 @@ export default function Alg2Screen() {
                         <View className="flex-column space-y-2">
                             <Text className="text-lg text-gray-500">AUC</Text>
                             <View className="flex items-center">
-                                <Text className="text-lg">0.86</Text>
+                                <Text className="text-lg">0.84</Text>
                             </View>
                         </View>
 
@@ -63,7 +63,7 @@ export default function Alg2Screen() {
                             <Text className="text-lg text-gray-500">Puntaje obtenido en Kaggle</Text>
                             <View className="flex items-center">
                                 <Image 
-                                    source={require('../assets/main/Juan.jpg')}
+                                    source={require('../assets/alg2/kaggle.jpeg')}
                                     className="h-24 w-full" />
                             </View>
                         </View>
