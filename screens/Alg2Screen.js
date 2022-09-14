@@ -7,21 +7,25 @@ export default function Alg2Screen() {
             <View className="p-4 space-y-5">
                 <View>
                     <Text className="font-bold text-3xl text-center mb-2">Algoritmo 2</Text>
-                    <Text className="text-lg text-gray-500 text-center">Perceptron</Text>
+                    <Text className="text-lg text-gray-500 text-center">Perceptrón</Text>
                 </View>
                 <View>
                     <Image
                         source={require('../assets/alg2/model.png')}
                         className="h-48 w-full rounded-lg -mt-4" />
                     <Text className="font-bold text-xl mb-2">Justificación</Text>
+                    <Text className="text-lg text-gray-500 text-justify mb-2">
+                        Las redes neuronales son un método que permiten el procesamiento 
+                        de datos de una manera inspirada en la estructura del cerebro humano, 
+                        pues utiliza la conexión entre diferentes neuronas artificiales 
+                        conectadas entre sí. Esto crea un sistema que se adapta a los errores 
+                        al aprender de estos y mejorar de manera constante.
+                                                
+                    </Text>
                     <Text className="text-lg text-gray-500 text-justify">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        It has survived not only five centuries, but also the leap into electronic typesetting, 
-                        remaining essentially unchanged. It was popularised in the 1960s with the release of 
-                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
-                        software like Aldus PageMaker including versions of Lorem Ipsum.
+                        Es por ello que decidimos elegir el modelo de Perceptron, ya que nos 
+                        brinda la flexibilidad de tener una red neuronal sencilla, pero 
+                        eficiente que va adaptándose a los errores.
                     </Text>
                 </View>
                 <View>
