@@ -1,18 +1,24 @@
 import { React, useState } from 'react';
 import { View, Text, Button, ScrollView } from 'react-native';
-import { TextInput } from 'react-native-paper';
 import { Picker } from '@react-native-picker/picker';
 import { Formik } from 'formik';
-import { InformationCircleIcon, IdentificationIcon, ClipboardIcon, StarIcon, HeartIcon, PaperAirplaneIcon } from 'react-native-heroicons/outline';
+import { 
+    InformationCircleIcon, 
+    IdentificationIcon, 
+    ClipboardIcon, 
+    StarIcon, 
+    HeartIcon, 
+    PaperAirplaneIcon 
+} from 'react-native-heroicons/outline';
 import axios from 'axios';
 
 export default function PredictionScreen() {    
-    const [sex, setSex] = useState('');
-    const [age, setAge] = useState('');
-    const [pclass, setPclass] = useState('');
-    const [sibsp, setSibsp] = useState('');
-    const [parch, setParch] = useState('');
-    const [cabin, setCabin] = useState('');
+    const [sex, setSex] = useState('1');
+    const [age, setAge] = useState('25');
+    const [pclass, setPclass] = useState('3');
+    const [sibsp, setSibsp] = useState('1');
+    const [parch, setParch] = useState('1');
+    const [cabin, setCabin] = useState('1');
 
     const ageArray = []
 
@@ -31,15 +37,7 @@ export default function PredictionScreen() {
                 </View>
 
                 <View>
-                    <Formik 
-                        initialValues={{
-                            sex: '', 
-                            age:'', 
-                            pclass:'', 
-                            sibsp:'',
-                            parch:'',
-                            cabin:'',
-                        }}
+                    <Formik
                         onSubmit = {values => 
                             axios.post('http://192.168.1.69:5000', {
                                 sex: sex,
@@ -49,29 +47,19 @@ export default function PredictionScreen() {
                                 parch: parch,
                                 cabin: cabin,
                             }).then(response => {
-                                //setPrediction(response.data);
-                                alert(response.data[0]);
+                                alert(response.data[0] === 1 ? "Sobrevivió" : "No sobrevivió");
                             }).catch(err => {
-                                console.log(err.message)
                                 alert(err.message);
                             })
                         }
                         >{({handleChange, handleBlur, handleSubmit, values}) => (
                             <View className="space-y-4">
-                                <View className="flex-row items-center space-x-2">
-                                    <InformationCircleIcon size={24} color="#00CCDD" />
-                                    <View className="flex-1">
-                                        {/* 
-                                        <TextInput
-                                            label="Sexo"
-                                            placeholder=""
-                                            selectionColor='#00CCDD'
-                                            underlineColor='#00CCDD'
-                                            activeUnderlineColor='#00CCDD'
-                                            onChangeText = {handleChange('sex')}
-                                            //onBlur = {handleBlur('sex')}
-                                            value = {values.sex} />
-                                        */}
+                                <View className="flex-column items-center space-x-2">
+                                    <View className="flex-row w-full items-center space-x-4">
+                                        <InformationCircleIcon size={24} color="#00CCDD" />
+                                        <Text className="font-bold text-xl">Sexo</Text>
+                                    </View>
+                                    <View className="w-full">
                                         <Picker
                                             selectedValue={sex}
                                             onValueChange={(itemValue, itemIndex) => setSex(itemValue)}>
@@ -81,20 +69,12 @@ export default function PredictionScreen() {
                                     </View>
                                 </View>
 
-                                <View className="flex-row items-center space-x-2">
-                                    <IdentificationIcon size={24} color="#00CCDD" />
-                                    <View className="flex-1">
-                                        {/* 
-                                        <TextInput
-                                            label="Edad"
-                                            placeholder=""
-                                            selectionColor='#00CCDD'
-                                            underlineColor='#00CCDD'
-                                            activeUnderlineColor='#00CCDD'
-                                            onChangeText = {handleChange('age')}
-                                            //onBlur = {handleBlur('age')}
-                                            value = {values.age} />
-                                        */}
+                                <View className="flex-column items-center space-x-2">
+                                    <View className="flex-row w-full items-center space-x-4">
+                                        <IdentificationIcon size={24} color="#00CCDD" />
+                                        <Text className="font-bold text-xl">Edad</Text>
+                                    </View>
+                                    <View className="w-full">
                                         <Picker
                                             selectedValue={age}
                                             onValueChange={(itemValue, itemIndex) => setAge(itemValue)}>
@@ -105,20 +85,12 @@ export default function PredictionScreen() {
                                     </View>
                                 </View>
 
-                                <View className="flex-row items-center space-x-2">
-                                    <ClipboardIcon size={24} color="#00CCDD" />
-                                    <View className="flex-1">
-                                        {/* 
-                                        <TextInput
-                                            label="Clase"
-                                            placeholder=""
-                                            selectionColor='#00CCDD'
-                                            underlineColor='#00CCDD'
-                                            activeUnderlineColor='#00CCDD'
-                                            onChangeText = {handleChange('pclass')}
-                                            //onBlur = {handleBlur('pclass')}
-                                            value = {values.pclass} />
-                                        */}
+                                <View className="flex-column items-center space-x-2">
+                                    <View className="flex-row w-full items-center space-x-4">
+                                        <ClipboardIcon size={24} color="#00CCDD" />
+                                        <Text className="font-bold text-xl">Clase</Text>
+                                    </View>
+                                    <View className="w-full">
                                         <Picker
                                             selectedValue={pclass}
                                             onValueChange={(itemValue, itemIndex) => setPclass(itemValue)}>
@@ -129,20 +101,12 @@ export default function PredictionScreen() {
                                     </View>
                                 </View>
 
-                                <View className="flex-row items-center space-x-2">
-                                    <StarIcon size={24} color="#00CCDD" />
-                                    <View className="flex-1">
-                                        {/* 
-                                        <TextInput
-                                            label="Conyuge/Hermanos"
-                                            placeholder=""
-                                            selectionColor='#00CCDD'
-                                            underlineColor='#00CCDD'
-                                            activeUnderlineColor='#00CCDD'
-                                            onChangeText = {handleChange('sibsp')}
-                                            //onBlur = {handleBlur('sibsp')}
-                                            value = {values.sibsp} />
-                                        */}
+                                <View className="flex-column items-center space-x-2">
+                                    <View className="flex-row w-full items-center space-x-4">
+                                        <StarIcon size={24} color="#00CCDD" />
+                                        <Text className="font-bold text-xl">Conyuge / Hermanos</Text>
+                                    </View>
+                                    <View className="w-full">
                                         <Picker
                                             selectedValue={sibsp}
                                             onValueChange={(itemValue, itemIndex) => setSibsp(itemValue)}>
@@ -152,20 +116,12 @@ export default function PredictionScreen() {
                                     </View>
                                 </View>
 
-                                <View className="flex-row items-center space-x-2">
-                                    <HeartIcon size={24} color="#00CCDD" />
-                                    <View className="flex-1">
-                                        {/* 
-                                        <TextInput
-                                            label="Padres/Hijos"
-                                            placeholder=""
-                                            selectionColor='#00CCDD'
-                                            underlineColor='#00CCDD'
-                                            activeUnderlineColor='#00CCDD'
-                                            onChangeText = {handleChange('parch')}
-                                            //onBlur = {handleBlur('parch')}
-                                            value = {values.parch} />
-                                        */}
+                                <View className="flex-column items-center space-x-2">
+                                    <View className="flex-row w-full items-center space-x-4">
+                                        <HeartIcon size={24} color="#00CCDD" />
+                                        <Text className="font-bold text-xl">Padres / Hijos</Text>
+                                    </View>
+                                    <View className="w-full">
                                         <Picker
                                             selectedValue={parch}
                                             onValueChange={(itemValue, itemIndex) => setParch(itemValue)}>
@@ -175,20 +131,12 @@ export default function PredictionScreen() {
                                     </View>
                                 </View> 
 
-                                <View className="flex-row items-center space-x-2">
-                                    <PaperAirplaneIcon size={24} color="#00CCDD" />
-                                    <View className="flex-1">
-                                        {/* 
-                                        <TextInput
-                                            label="Cabina"
-                                            placeholder=""
-                                            selectionColor='#00CCDD'
-                                            underlineColor='#00CCDD'
-                                            activeUnderlineColor='#00CCDD'
-                                            onChangeText = {handleChange('cabin')}
-                                            //onBlur = {handleBlur('cabin')}
-                                            value = {values.cabin} />
-                                        */}
+                                <View className="flex-column items-center space-x-2">
+                                    <View className="flex-row w-full items-center space-x-4">
+                                        <PaperAirplaneIcon size={24} color="#00CCDD" />
+                                        <Text className="font-bold text-xl">Cabina</Text>
+                                    </View>
+                                    <View className="w-full">
                                         <Picker
                                             selectedValue={cabin}
                                             onValueChange={(itemValue, itemIndex) => setCabin(itemValue)}>
