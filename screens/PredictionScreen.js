@@ -96,7 +96,7 @@ export default function PredictionScreen() {
                                             onValueChange={(itemValue, itemIndex) => setPclass(itemValue)}>
                                                 <Picker.Item label="Tipo 1" value="1" />
                                                 <Picker.Item label="Tipo 2" value="2" />
-                                                <Picker.Item label="Tipo 3" value="2" />
+                                                <Picker.Item label="Tipo 3" value="3" />
                                         </Picker>
                                     </View>
                                 </View>
