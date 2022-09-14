@@ -18,13 +18,10 @@ export default function HomeScreen() {
                         source={require('../assets/main/titanic.jpg')}
                         className="h-48 w-full rounded-lg my-4" />
                     <Text className="text-lg text-gray-500 text-justify">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        It has survived not only five centuries, but also the leap into electronic typesetting, 
-                        remaining essentially unchanged. It was popularised in the 1960s with the release of 
-                        Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
-                        software like Aldus PageMaker including versions of Lorem Ipsum.
+                        Este proyecto tiene como finalidad usar dos distintos algoritmos de Machine Learning, 
+                        los cuales analizarán datos en formato CSV para poder realizar predicciones lo más 
+                        acertadas posibles. En este caso, se tomarán datos de pasajeros del Titanic, y el modelo 
+                        deberá predecir si un pasajero en cuestión sobrevivió o murió basado en sus datos de entrenamiento.
                     </Text>
                 </View>
                 <View className="flex-column">
